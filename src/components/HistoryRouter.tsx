@@ -1,8 +1,7 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
 import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import History from './BrowserHistory';
 
 export default function HistoryRouter(props: PropsWithChildren<unknown>): ReactElement {
-  const history = createBrowserHistory();
-  return <Router history={history}>{props.children}</Router>;
+  return <Router history={History}>{props.children}</Router>;
 }
