@@ -1,8 +1,9 @@
 import React, { Component, ReactElement } from 'react';
 import HistoryRouter from './components/HistoryRouter';
 import EmployeeListDashBoard from './EmployeeList/containers/Dashboard';
-import ErrorBoundary from './components/Errorboundary';
-
+import Authentication from './Authentication';
+import DefaultLayout from './Layout/Default';
+import { Switch } from 'react-router-dom';
 /**
  * CSS and Bootstrap
  */
@@ -13,11 +14,11 @@ class App extends Component {
     return (
       <div>
         <HistoryRouter>
-          <ErrorBoundary>
-            <EmployeeListDashBoard />
-            <p>APP Component</p>
-            <p>MY Component</p>
-          </ErrorBoundary>
+          <Switch>
+            <Authentication path="/" exact>
+              <DefaultLayout component={EmployeeListDashBoard} />
+            </Authentication>
+          </Switch>
         </HistoryRouter>
       </div>
     );
