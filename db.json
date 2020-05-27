@@ -1,0 +1,12 @@
+{
+  "employees": [
+    { "id": 1, "fname": "Alex", "lname": "Xavier", "age": "40", "companyId": 101, "email": "alex.xavier@xxx.com" },
+    { "id": 2, "fname": "John", "lname": "Doe", "age": "28", "companyId": 102, "email": "john.doe@xxx.com" },
+    { "id": 3, "fname": "Peter", "lname": "Parker", "age": "46", "companyId": 103, "email": "peter.parker@xxx.com" }
+  ],
+  "companies": [
+    { "companyId": 101, "name": "Apple" },
+    { "companyId": 102, "name": "Microsoft" },
+    { "companyId": 103, "name": "Facebook" }
+  ]
+}
